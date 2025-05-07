@@ -17,6 +17,7 @@ use App\MoonShine\Resources\ZoneResource;
 use App\MoonShine\Resources\PlaceResource;
 use App\MoonShine\Resources\PlaceSpecResource;
 use App\MoonShine\Resources\BookingResource;
+use App\MoonShine\Resources\GalleryResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -39,6 +40,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 PlaceResource::class,
                 PlaceSpecResource::class,
                 BookingResource::class,
+                GalleryResource::class,
             ])
             ->pages([
                 ...$config->getPages(),

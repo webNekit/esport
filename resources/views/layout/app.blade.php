@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameZone — Компьютерный клуб</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
@@ -33,17 +36,23 @@
 </button>
 @include('layout.partials.footer')
 <script>
-    // Открытие модального окна при клике на кнопку
     document.querySelectorAll('.open-modal-btn').forEach(button => {
         button.addEventListener('click', function() {
             document.getElementById('bookingModal').classList.remove('hidden');
         });
     });
 
-    // Закрытие модального окна
     function closeModal() {
         document.getElementById('bookingModal').classList.add('hidden');
     }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgZoom],
+            speed: 500,
+        });
+    });
 </script>
 @livewireScripts
 </body>

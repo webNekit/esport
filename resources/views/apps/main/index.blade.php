@@ -32,7 +32,7 @@
             <h2 class="text-4xl font-bold mb-8 text-yellow-400 text-center">Забронировать место</h2>
             <livewire:place.collection />
         </section>
-
+        <livewire:section.gallery />
         <livewire:section.service />
         <livewire:section.setup />
         <section id="contacts" class="py-16 container mx-auto px-4">

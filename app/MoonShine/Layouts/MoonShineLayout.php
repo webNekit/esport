@@ -38,6 +38,7 @@ use App\MoonShine\Resources\ZoneResource;
 use App\MoonShine\Resources\PlaceResource;
 use App\MoonShine\Resources\PlaceSpecResource;
 use App\MoonShine\Resources\BookingResource;
+use App\MoonShine\Resources\GalleryResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -60,6 +61,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Услуги', ServiceResource::class),
             MenuItem::make('Комплектующие', SetupResource::class),
             MenuItem::make('Залы', ZoneResource::class),
+            MenuItem::make('Галерея', GalleryResource::class),
         ];
     }
 
