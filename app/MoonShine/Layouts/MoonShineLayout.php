@@ -31,6 +31,7 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\Wrapper,
     When};
 use App\MoonShine\Resources\ServiceResource;
+use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use App\MoonShine\Resources\SetupResource;
 use App\MoonShine\Resources\ZoneResource;
@@ -51,12 +52,14 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
+            MenuGroup::make('Игровые места', [
+                MenuItem::make('Игровые места', PlaceResource::class),
+                MenuItem::make('Характеристики мест', PlaceSpecResource::class),
+                MenuItem::make('Бронирование', BookingResource::class),
+            ]),
             MenuItem::make('Услуги', ServiceResource::class),
             MenuItem::make('Комплектующие', SetupResource::class),
             MenuItem::make('Залы', ZoneResource::class),
-            MenuItem::make('Игровые места', PlaceResource::class),
-            MenuItem::make('Характеристики мест', PlaceSpecResource::class),
-            MenuItem::make('Бронирование', BookingResource::class),
         ];
     }
 
